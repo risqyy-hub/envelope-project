@@ -1,9 +1,19 @@
 function openEnvelope() {
-    document.querySelector('.flap').style.transform = "rotateX(180deg)";
-    document.querySelector('.letter').style.opacity = "1";
+    let flap = document.querySelector('.flap');
+    let letter = document.querySelector('.letter');
+
+    if (flap && letter) {
+        flap.classList.add('open');
+        letter.classList.add('visible');
+    }
 }
 
 function closeEnvelope() {
-    document.querySelector('.flap').style.transform = "rotateX(0deg)";
-    document.querySelector('.letter').style.opacity = "0";
+    let flap = document.querySelector('.flap');
+    let letter = document.querySelector('.letter');
+
+    if (flap && letter) {
+        flap.classList.remove('open');
+        letter.classList.remove('visible');
+    }
 }
