@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fbeff2;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.envelope-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 140px;
+    background-color: #ff8fa3;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 80px solid #ff6f91;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+.envelope .body {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ff8fa3;
+    border-radius: 0 0 10px 10px;
+}
+
+.envelope .letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #ff6f91;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #ff5277;
+}
+
+/* Efek Zoom saat di HP */
+@media (max-width: 600px) {
+    .envelope-wrapper {
+        transform: scale(1.5);
+    }
+}
